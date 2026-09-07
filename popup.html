@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fingerprint Cleaner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="brand">
+        <span class="logo">🛡️</span>
+        <span class="brand-name">Fingerprint <span class="highlight">Cleaner</span></span>
+      </div>
+      <div class="badge" id="statusBadge">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">Ready</span>
+      </div>
+    </div>
+
+    <!-- SITE INFO -->
+    <div class="site-info" id="siteInfo">
+      <span class="site-icon">🌐</span>
+      <span class="site-name" id="siteName">No site detected</span>
+      <span class="site-status" id="siteStatus">—</span>
+    </div>
+
+    <!-- QUICK CLEAN -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🧹</span>
+        <span class="section-title">Quick Clean</span>
+      </div>
+      <div class="quick-grid">
+        <button class="quick-btn" data-action="cleanAll">
+          <span>🧹</span> Clean All
+        </button>
+        <button class="quick-btn" data-action="cleanCookies">
+          <span>🍪</span> Cookies
+        </button>
+        <button class="quick-btn" data-action="cleanStorage">
+          <span>💾</span> Storage
+        </button>
+        <button class="quick-btn" data-action="changeFingerprint">
+          <span>🔄</span> New Fingerprint
+        </button>
+      </div>
+    </div>
+
+    <!-- FINGERPRINT STATUS -->
+    <div class="section fingerprint-section">
+      <div class="section-header">
+        <span class="section-icon">🆔</span>
+        <span class="section-title">Fingerprint Status</span>
+      </div>
+      <div class="fingerprint-status">
+        <div class="fp-item">
+          <span class="fp-label">Device ID</span>
+          <span class="fp-value" id="deviceId">—</span>
+        </div>
+        <div class="fp-item">
+          <span class="fp-label">Canvas Fingerprint</span>
+          <span class="fp-value" id="canvasFp">—</span>
+        </div>
+        <div class="fp-item">
+          <span class="fp-label">WebGL Fingerprint</span>
+          <span class="fp-value" id="webglFp">—</span>
+        </div>
+        <div class="fp-item">
+          <span class="fp-label">Font Fingerprint</span>
+          <span class="fp-value" id="fontFp">—</span>
+        </div>
+        <div class="fp-item">
+          <span class="fp-label">User Agent</span>
+          <span class="fp-value" id="userAgent">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTRA SETTINGS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">⚙️</span>
+        <span class="section-title">Settings</span>
+      </div>
+      <div class="setting-row">
+        <label class="switch">
+          <input type="checkbox" id="autoClean" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="setting-label">Auto-clean on page load</span>
+      </div>
+      <div class="setting-row">
+        <label class="switch">
+          <input type="checkbox" id="spoofUserAgent" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="setting-label">Spoof User Agent</span>
+      </div>
+      <div class="setting-row">
+        <label class="switch">
+          <input type="checkbox" id="blockTrackers" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="setting-label">Block Trackers</span>
+      </div>
+    </div>
+
+    <!-- SHEER ID SPECIAL -->
+    <div class="section sheerid-section">
+      <div class="section-header">
+        <span class="section-icon">🎯</span>
+        <span class="section-title">Sheer ID Bypass</span>
+      </div>
+      <div class="sheerid-actions">
+        <button class="btn-bypass" id="bypassSheerID">
+          <span>🚀</span> Bypass Sheer ID Limit
+        </button>
+        <div class="bypass-status" id="bypassStatus">
+          Ready to bypass
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <span class="footer-brand">Fingerprint Cleaner © 2025</span>
+      <span class="footer-version">v2.0.0</span>
+    </div>
+
+    <!-- NOTIFICATION -->
+    <div id="notification" class="notification"></div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
